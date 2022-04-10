@@ -1,0 +1,17 @@
+@model SweetMarket.Models.Treat
+
+<h2>Add a Treat</h2>
+
+<h4>Add a treat to this flavor: @Html.DisplayFor(model => model.TreatName)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.TreatId)
+
+  @Html.Label("Select treat")
+  @Html.DropDownList("FlavorId")
+
+  <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
