@@ -43,7 +43,7 @@
 ```
 {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=localhost;Port=3306;database=john_whitten_treats;uid=root;pwd=[YOUR-PASSWORD-HERE];"
+        "DefaultConnection": "Server=localhost;Port=3306;database=jonathan_delcid;uid=root;pwd=[YOUR-PASSWORD-HERE];"
     }
 }
 ```
