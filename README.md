@@ -37,7 +37,7 @@
 - Launch the MySQL server with the command `mysql -uroot -p[YOUR-PASSWORD-HERE]`
 - Navigate to the directory: `$ cd Code-Review-11`
 - Open in Vs code: `$ code .`
-- Navigate to the project directory PierresTreats: `$ cd SweetMarket` and type the following command in the terminal `$ touch appsettings.json`
+- Navigate to the project directory SweetMarket: `$ cd SweetMarket` and type the following command in the terminal `$ touch appsettings.json`
 - In the appsettings.json file enter the following code:
 
 ```
