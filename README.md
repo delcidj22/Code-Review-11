@@ -16,26 +16,47 @@
 
 ## Project Title: Factory
 
-## Project Setup/Installation Instructions:
-- _Open the terminal on your local computer._
+## Project Setup/Installation Instructions <a id="setup"></a>
 
-- _Navigate to the parent directory of your preference._
+### Install C#, .NET, MySQL Community Server and MySQL Workbench
 
-- _Clone this project using ```$ git clone https://github.com/delcidj22/code-review-11```_
+- Open the terminal on your local machine
+- If [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) and [.NET](https://docs.microsoft.com/en-us/dotnet/) are not installed on your local device, follow the instructions here [here](https://www.learnhowtoprogram.com/c-and-net-part-time/getting-started-with-c/installing-c-and-net).
+- If [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](https://www.mysql.com/products/workbench/) are not installed on your local device, follow the instructions [here](https://www.learnhowtoprogram.com/c-and-net-part-time/getting-started-with-c/installing-and-configuring-mysql).
+- If [dotnet-ef](https://docs.microsoft.com/en-us/ef/core/cli/dotnet) is not installed on your local device, install it globally with the terminal command ```dotnet tool install --global dotnet-ef --version 5.0.2```.
 
-- _Navigate to the top level of the directory with the command ```$ cd code-review-11```_
+### Clone the project
 
-- _Determine if the MySql server is running locally by typing the following into the command line mysql -uroot -p[The password you set up]_
+- Open the terminal on your local computer.
+- Navigate to the parent directory of your preference.
+- Clone this project using `$ git clone https://github.com/delcidj22/Code-Review-11`
 
-- _Open MySql Workbench. Once open select the Administration tab. Next select Data Import/Restore. This opens up the Data Import window with the Import from Disk tab open. Select the radio button for Import from Self-Contained File. Click the button with the three dots (if on windows) or two dots (if on mac) at the end of the path field. This will open a window to search for the sql dump file on your local disk. Navigate to the root directory of the cloned project and select jonathan.delcid.sql and click the open button. Next, press the New... button. This will open a window where you can choose the name of the imported schema.Choose a name appropriate to the project, e.g. Hair Salon and click Okay. We'll need this name later when setting up the project to work with this schema. If on a mac, click the Start Import button. If on a windows machine, switch to the Import Progress tab on the Data Import page. Click the Import button. Finally, re-click on the Schemas tab. Right-click in the Schemas window, and select Refresh All. The imported schema should now be listed. *Navigate back to the HairSalon/ directory and create a file named: appsettings.json. In this file, add the fowling configuration to set up the project to work with the schema you imported: { "ConnectionStrings": { "DefaultConnection": "Server=localhost;Port=3306;database=[THE-NAME-YOU-CHOSE-WHEN-IMPORTING-THE-SCHEMA];uid=root;pwd=[YOUR-PASSWORD-HERE];" }}_
 
-- _In the Factory main directory run dotnet build on the command line._
+### Scaffold and connect the database
 
-- _Run dotnet run on the command line to start the web server._
+- Launch the MySQL server with the command `mysql -uroot -p[YOUR-PASSWORD-HERE]`
+- Navigate to the directory: `$ cd Code-Review-11`
+- Open in Vs code: `$ code .`
+- Navigate to the project directory PierresTreats: `$ cd SweetMarket` and type the following command in the terminal `$ touch appsettings.json`
+- In the appsettings.json file enter the following code:
+
+```
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=john_whitten_treats;uid=root;pwd=[YOUR-PASSWORD-HERE];"
+    }
+}
+```
+- Recreate project environment and install required dependencies with terminal command `$ dotnet restore`
+- Build the program with the command `$ dotnet build`
+- Scaffold the database with the command ```$ dotnet ef database update```
+
+### Run the project
+- Run the program with the command `$ dotnet run`
 
 
 ## Known Bugs
-- _Nothing happens when logging in._
+- None
 
 
 
